@@ -1,0 +1,135 @@
+html
+{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(210, 210, 210);
+}
+
+body
+{
+    height: 100%;
+    margin: 0;
+    background-color: rgb(28, 28, 28);
+}
+
+h1, h2, h3, h4, h5
+{
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+    color: unset;
+}
+
+.content
+{
+    width: 80%;
+    min-width: 1000px;
+    height: 100%;
+    margin: auto;
+}
+
+.header
+{
+    height: 10%;
+    max-height: 75px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.panel
+{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab-groups
+{
+    padding: 15px;
+}
+
+.tab-group
+{
+    margin-bottom: 15px;
+}
+
+.tab-group-title
+{
+    padding: 5px;
+}
+
+.tab-group-tabs
+{
+    padding: 3px;
+}
+
+.tab
+{
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tab-drag
+{
+    width: 16px;
+    margin-right: 4px;
+    background:radial-gradient(rgba(0, 0, 0, 0.3) 50%, transparent 50%) 0 0;
+    background-size: 4px 4px;
+}
+
+.tab-side
+{
+    margin: 0 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tab-icon
+{
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+.tab-checkbox
+{
+    width: 16px;
+    height: 16px;
+    margin: 0;
+	position: relative;
+    -webkit-appearance: none;
+	display: inline-block;
+	background-color: transparent;
+	border: 1px solid #cfcfcf;
+	border-radius: 3px;
+}
+
+.tab-checkbox:checked::after
+{
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: -2px;
+	left: 1px;
+	color: #99a1a7;
+}
+
+.tab-link
+{
+    margin: 0 3px;
+}
+
+.tab-title
+{
+    font-size: 18px;
+}
+
+.tab-url
+{
+    padding-left: 8px;
+    font-size: 12px;
+    color: rgb(140, 140, 140);
+}

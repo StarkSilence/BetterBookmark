@@ -1,0 +1,43 @@
+html
+{
+    padding: 0;
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+    width: 250px;
+}
+
+.button-group
+{
+    position: relative;
+}
+
+button
+{
+    width: -moz-available;
+    height: 25px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+}
+
+button:hover
+{
+    background-color: rgb(224, 224, 224);
+}
+
+button.close
+{
+    width: 70px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+button.close:hover
+{
+    background-color: rgb(204, 204, 204);
+}
