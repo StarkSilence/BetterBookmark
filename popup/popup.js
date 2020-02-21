@@ -38,17 +38,17 @@ function saveAndCloseSelectedTabs()
 
 function getSelectedTabs()
 {
-    return browser.tabs.query({highlighted: true});
+    return browser.tabs.query({highlighted: true, currentWindow: true});
 }
 
 function saveAllTabs()
 {
-    getSelectedTabs().then(saveTabs);
+    getAllTabs().then(saveTabs);
 }
 
 function saveAndCloseAllTabs()
 {
-    getSelectedTabs().then(saveAndCloseTabs);
+    getAllTabs().then(saveAndCloseTabs);
 }
 
 function getAllTabs()
@@ -58,9 +58,26 @@ function getAllTabs()
 
 function saveTabs(tabs)
 {
-    const urls = tabs.map(e => e.url);
+    const saved = tabs.map(e => createNewTab(e.title, e.url, e.favIconUrl));
+    const id = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
 
-    browser.storage.sync.set(urls);
+    const tabGroup = { id: id, title: "Untitled", tabs: saved };
+
+    browser.storage.sync.get("tabGroups").then((res) =>
+    {
+        if (!Array.isArray(res.tabGroups))
+        {
+            res.tabGroups = [];
+        }
+    
+        res.tabGroups.push(tabGroup);
+        browser.storage.sync.set({ tabGroups: res.tabGroups });
+    });
+}
+
+function createNewTab(title, url, iconUrl)
+{
+    return { title: title, url: url, iconUrl: iconUrl };
 }
 
 function saveAndCloseTabs(tabs)

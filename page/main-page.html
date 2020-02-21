@@ -4,38 +4,17 @@
         <link rel="stylesheet" href="main-page.css">
     </head>
     <body>
+        <div id="header" class="panel">
+            <h1>OneTab</h1>
+        </div>
         <div class="content panel">
-            <div class="header panel">
-                <h1>OneTab</h1>
-            </div>
-            <div class="tab-groups">
-                <div class="tab-group panel">
-                    <h3 class="tab-group-title panel">
-                        Group 1
-                    </h3>
-                    <div class="tab-group-tabs">
-                        <div class="tab">
-                            <div class="tab-drag">
+            <div id="sidebar" class="panel">
+                <div style="width: 300px; background-color: red;">
 
-                            </div>
-                            <div class="tab-side">
-                                <img src="https://developer.mozilla.org/static/img/favicon32.7f3da72dcea1.png" class="tab-icon" />
-                                <input type="checkbox" class="tab-checkbox" />
-                            </div>
-                            <a class="tab-link" href="#">
-                                <div>
-                                    <div class="tab-title">
-                                        Tab title
-                                    </div>
-                                    <div class="tab-url">
-                                        Tab url
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
+            <div id="tab-groups"></div>
         </div>
+        <script src="main-page.js"></script>
     </body>
 </html>
