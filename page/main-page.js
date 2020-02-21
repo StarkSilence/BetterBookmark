@@ -53,6 +53,20 @@ function createTabGroup(tabGroup)
         tabGroupTitle.focus();
     };
 
+    let tabGroupRemoveButton = findFirstChildByClass(newTabGroup, 'remove-button');
+    tabGroupRemoveButton.onclick = () =>
+    {
+        browser.storage.sync.get('tabGroups').then((res) =>
+        {
+            let index = res.tabGroups.findIndex((tg) => tg.id == tabGroup.id);
+
+            res.tabGroups.splice(index, 1);
+
+            browser.storage.sync.set({tabGroups: res.tabGroups});
+            newTabGroup.remove();
+        });
+    };
+
     let tabGroupTabs = findFirstChildByClass(newTabGroup, 'tab-group-tabs');
 
     for (const tab of tabGroup.tabs)
