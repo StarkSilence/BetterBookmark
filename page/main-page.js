@@ -37,6 +37,13 @@ function createTabGroup(tabGroup)
     tabGroupTitle.onblur = () =>
     {
         tabGroupTitle.contentEditable = false;
+        
+        browser.storage.sync.get('tabGroups').then((res) =>
+        {
+            res.tabGroups.find((tg) => tg.id == tabGroup.id).title = tabGroupTitle.innerText;
+
+            browser.storage.sync.set({tabGroups: res.tabGroups});
+        });
     };
     tabGroupTitle.onkeydown = (key) =>
     {
