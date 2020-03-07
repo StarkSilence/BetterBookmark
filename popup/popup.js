@@ -61,7 +61,7 @@ function saveTabs(tabs)
     const saved = tabs.map(e => createNewTab(e.title, e.url, e.favIconUrl));
     const id = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
 
-    const tabGroup = { id: id, title: "Untitled", tabs: saved };
+    const tabGroup = { id: id, title: "", tabs: saved };
 
     browser.storage.sync.get("tabGroups").then((res) =>
     {
