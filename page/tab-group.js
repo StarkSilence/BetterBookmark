@@ -5,6 +5,8 @@ function createTabGroup(tabGroup)
     let newTabGroup = defaultTabGroup.cloneNode(true);
     
     var title = findFirstChildByClass(newTabGroup, 'tab-group-title');
+    var moveButton = findFirstChildByClass(newTabGroup, 'move-button');
+    var deleteButton = findFirstChildByClass(newTabGroup, 'delete-button');
     var renameButton = findFirstChildByClass(newTabGroup, 'rename-button');
     var removeButton = findFirstChildByClass(newTabGroup, 'remove-button');
     var tabs = findFirstChildByClass(newTabGroup, 'tab-group-tabs');

@@ -11,7 +11,7 @@ body
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: rgb(28, 28, 28);
+    background-color: rgb(28, 28, 28) !important;
 }
 
 h1, h2, h3, h4, h5
@@ -55,121 +55,5 @@ a
 {
     padding: 15px;
     flex: 1 1 auto;
-    overflow: hidden;
-}
-
-.tab-group
-{
-    margin-bottom: 15px;
-    flex: 1 1 auto;
-}
-
-.tab-group-header
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 35px;
-    padding: 5px;
-}
-
-.tab-group-header a
-{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    padding: 0 5px;
-    border-color: transparent;
-    background-color: transparent;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.tab-group-title
-{
-    height: min-content;
-    font-size: 20px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.tab-group-header-buttons
-{
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.rename-button
-{
-    color: rgb(210, 210, 210);
-}
-
-.remove-button
-{
-    color: rgb(248, 89, 89);
-}
-
-.tab-group-tabs
-{
-    padding: 3px;
-}
-
-.tab
-{
-    position: relative;
-    margin: 3px 0 5px 0;
-    padding: 3px;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: row;
-}
-
-.tab-drag
-{
-    width: 16px;
-    height: 36px;
-    position: absolute;
-    left: 0;
-    background:radial-gradient(rgba(0, 0, 0, 0.3) 50%, transparent 50%) 0 0;
-    background-size: 4px 4px;
-}
-
-.tab-drag-down
-{
-    background:radial-gradient(rgba(255, 255, 255, 0.3) 50%, transparent 50%) 0 0;
-    background-size: 4px 4px;
-}
-
-.tab-icon
-{
-    width: 16px;
-    height: 16px;
-    margin: 0 5px 0 0;
-    float: left;
-}
-
-.tab-link
-{
-    margin: 0 3px;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.tab-title
-{
-    font-size: 18px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.tab-url
-{
-    font-size: 12px;
-    color: rgb(140, 140, 140);
-    text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
 }

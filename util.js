@@ -28,3 +28,4 @@ function findFirstChildByClass(element, className)
     
     return null;
 }
+

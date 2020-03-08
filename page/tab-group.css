@@ -1,0 +1,60 @@
+.tab-group
+{
+    margin-bottom: 15px;
+    flex: 1 1 auto;
+}
+
+.tab-group-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    padding: 5px;
+}
+
+.tab-group-header a
+{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    padding: 0 5px;
+    border-color: transparent;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tab-group-title
+{
+    height: min-content;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tab-group-header-buttons
+{
+    height: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-group-header-selected-buttons
+{
+    display: flex;
+    align-items: center;
+}
+
+.tab-group-header-group-buttons
+{
+    display: flex;
+    align-items: center;
+}
+
+.tab-group-tabs
+{
+    padding: 3px;
+}

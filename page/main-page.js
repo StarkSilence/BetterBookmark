@@ -15,7 +15,7 @@ function reloadTabGroups()
 
 function loadTabGroups()
 {
-    browser.storage.sync.get('tabGroups').then((res) => 
+    getSyncTabGroups().then((res) => 
     {
         for (const tabGroup of res.tabGroups)
         {
