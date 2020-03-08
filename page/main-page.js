@@ -1,9 +1,17 @@
-const tabGroupsElement = document.getElementById('tab-groups');
+$(document).ready(() =>
+{
+    this.tabGroupsElement = document.getElementById('tab-groups');
 
-const defaultTab = createElement('tab.html');
-const defaultTabGroup = createElement('tab-group.html');
+    loadTabGroups();
 
-loadTabGroups();
+    browser.storage.onChanged.addListener(reloadTabGroups);
+});
+
+function reloadTabGroups()
+{
+    tabGroupsElement.innerHTML = '';
+    loadTabGroups();
+}
 
 function loadTabGroups()
 {

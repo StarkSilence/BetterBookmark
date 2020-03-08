@@ -1,3 +1,5 @@
+const defaultTabGroup = createElement('tab-group.html');
+
 function createTabGroup(tabGroup)
 {
     let newTabGroup = defaultTabGroup.cloneNode(true);
@@ -23,7 +25,7 @@ function setTitle(tabGroup, title)
 {
     title.innerHTML = tabGroup.title;
 
-    title.onblur = () =>
+    $(title).blur(() =>
     {
         title.contentEditable = false;
         
@@ -33,29 +35,29 @@ function setTitle(tabGroup, title)
 
             browser.storage.sync.set({tabGroups: res.tabGroups});
         });
-    };
+    });
 
-    title.onkeydown = (key) =>
+    $(title).keydown((key) =>
     {
         if (key.keyCode == 13 || key.key == 'Enter')
         {
             key.preventDefault();
         }
-    };
+    });
 }
 
 function setRenameButton(renameButton, title)
 {
-    renameButton.onclick = () =>
+    $(renameButton).click(() =>
     {
         title.contentEditable = true;
         title.focus();
-    };
+    });
 }
 
 function setRemoveButton(tabGroup, removeButton)
 {
-    removeButton.onclick = () =>
+    $(removeButton).click(() =>
     {
         browser.storage.sync.get('tabGroups').then((res) =>
         {
@@ -64,19 +66,6 @@ function setRemoveButton(tabGroup, removeButton)
             res.tabGroups.splice(index, 1);
 
             browser.storage.sync.set({tabGroups: res.tabGroups});
-            newTabGroup.remove();
         });
-    };
-}
-
-function createTab(tab)
-{
-    let newTab = defaultTab.cloneNode(true);
-
-    findFirstChildByClass(newTab, 'tab-title').innerHTML = tab.title;
-    findFirstChildByClass(newTab, 'tab-url').innerHTML = tab.url;
-    findFirstChildByClass(newTab, 'tab-link').href = tab.url;
-    findFirstChildByClass(newTab, 'tab-icon').src = tab.iconUrl;
-
-    return newTab;
+    });
 }

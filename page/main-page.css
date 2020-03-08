@@ -129,10 +129,16 @@ a
 .tab-drag
 {
     width: 16px;
-    height: 90%;;
+    height: 36px;
     position: absolute;
     left: 0;
     background:radial-gradient(rgba(0, 0, 0, 0.3) 50%, transparent 50%) 0 0;
+    background-size: 4px 4px;
+}
+
+.tab-drag-down
+{
+    background:radial-gradient(rgba(255, 255, 255, 0.3) 50%, transparent 50%) 0 0;
     background-size: 4px 4px;
 }
 
