@@ -14,6 +14,7 @@ function createTab(tab)
     $(drag).click(() =>
     {
         $(drag).toggleClass('tab-drag-down');
+        $(newTab).toggleClass('panel');
     });
 
     return newTab;
